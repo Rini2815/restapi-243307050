@@ -1,0 +1,7 @@
+<IfModule mod_rewrite>
+    RewriteEngine On # Turn on the rewriting engine
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^api-karyawan/?$ api-karyawan.php [NC,L]
+    RewriteRule ^api-karyawan/([0-9]+)/?$ api-karyawan.php?id=$1 [NC,L]
+</IfModule>
